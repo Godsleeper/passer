@@ -2,22 +2,29 @@ extend ../layout
 
 block content
   .content
-    .content_title_1
-      .content_maintitle Connect with people who have expertise as
-      .content_smalltitle Get access to potential teammates that have complimentary skillsets
+    .content_title
+      .content_maintitle 瞧瞧这些可怜的工科生
+      .content_smalltitle 找到你的专业，让我们来看看有什么是可以帮助你的
     .content_main
-      .content_row_1 
-        .content_r1_c1 
-        .content_r1_c2
-        .content_r1_c3
-    .content_title_2
-      .content_maintitle Connect with people who have expertise as
-      .content_smalltitle Get access to potential teammates that have complimentary skillsets
-    .content_main
-      .content_row_2 
-        .content_r2_c1 
-        .content_r2_c2
-        .content_r2_c3
+      .content_row.clearfix
+        figure.content_r1_c1
+          img(src="/images/computer_science.png")
+          figcaption
+            h2 计算机
+            p 拯救码农的生活
+        figure.content_r1_c1
+          img(src="/images/electric.png")
+          figcaption
+            h2 电气工程
+            p 听说你们要爬电线杆？
+        figure.content_r1_c1
+          img(src="/images/tongxin.png")
+          figcaption
+            h2 信息工程
+            p 谁蹭了我的wifi
+        figure.content_r1_c1
+        figure.content_r1_c1
+        figure.content_r1_c1
 
   include ../includes/footer
       
