@@ -1,0 +1,186 @@
+*{
+	margin:0px;
+	padding: 0px;
+	font-family: "Microsoft YaHei"
+}
+
+.topbar{
+	background: url('../images/top_bg.jpg')no-repeat;
+	color: #fff;
+	height:480px;
+	overflow: hidden;
+}
+
+.topbar_model(@height){
+	height:@height;
+	width:1200px;
+	margin: 0 auto;
+}
+
+.topbar_header{
+	.topbar_model(60px);
+	a{
+		color:#fff;
+		text-decoration: none;
+	}
+	.logo{
+		font-size: 20px;
+		font-weight: bold;
+		display:inline-block;
+		height: 50px;
+		line-height: 50px;
+		float:left;
+		text-decoration: none;
+		margin-left:10px;
+		.logotext{
+			float:left;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		span{
+			display:inline-block;
+			float:left;
+			background:url('../images/head_logo.png')no-repeat center left;
+			background-size:40px 40px;	
+			height:50px;
+			width:50px;
+		}
+	}
+	.top_list{
+		a:hover{
+			color:rgb(254, 182, 0)
+		}
+		float:right;
+		margin-right:50px; 
+		list-style: none;
+		li{
+			display: inline-block;
+			margin-left: 20px;
+			font-size: 14px;
+			margin-top: 10px;
+			padding: 5px 10px;
+		}
+		.active{
+			a{
+			color:rgb(254, 182, 0);
+			}	
+			border:solid 2px rgb(254, 182, 0);
+			border-radius: 3px;
+
+		}
+	}
+}
+.topbar_content{
+	margin-top: 0px;
+ 	.topbar_model(350px);
+ 	.maintitle{
+ 		height:350px;
+ 		line-height: 350px;
+ 		text-align: center;
+ 		font-weight: bold;
+ 		font-size: 50px;
+ 	}
+ }
+
+.topbar_footer{
+ 	.topbar_model(70px);
+ 	
+ 	.search{
+ 		padding:10px 10px;
+ 		float:left;
+ 		margin-left:440px;
+ 		border-radius: 5px;
+ 		border: none;
+ 	}
+ 	.searchbtn{
+ 		font-size:20px;
+ 		padding: 5px 20px;
+ 		float: left;
+ 		margin-left: 2px;
+ 		background:rgb(0, 128, 255);
+ 		border:none;
+ 		color:#fff;
+ 		border-radius: 5px;
+ 		outline: none;
+ 	}
+}
+
+.footthree(){	
+	width:33.3%;
+	float: left;
+	padding-top:40px;
+}
+
+.footlist(){
+	list-style: none;
+	font-size: 12px;
+	color:#6F6F6F;
+	margin-top: 10px;
+}
+
+.footer{
+	margin-bottom: 0px;
+	height:271px;
+	background: rgb(238, 238, 238);
+	.footertop{
+		.topbar_model(200px);
+		border-bottom: 1px solid #fff;
+		.company{
+			.footthree;
+			padding-top:40px;
+			.companylist{
+				.footlist
+			}
+		}
+		.alink{
+		  .footthree;
+		  .linklist{
+		  	.footlist;
+		  }
+		  
+		}
+		.github{
+		  .footthree;
+		  .gittitle{
+		  	margin-bottom: 20px;
+		  }
+		}
+	}
+	.footerbottom{
+		.topbar_model(70px);
+		.foottitle{
+			float: left;
+			font-size: 24px;
+			line-height: 70px;
+			color: rgb(0, 128, 255);
+		}
+		.year{
+			float:left;
+			font-size: 14px;
+			margin-left: 10px;
+			color:#6F6F6F;
+			line-height: 70px;
+		}
+	}
+
+	.gitball{
+		transition:all 1s;
+		background:rgb(0, 128, 255);
+		width:50px;
+		height:50px;
+		border-radius: 50px; 
+		overflow: hidden;
+	}
+
+	.gitball:hover{
+		width:300px;
+		color:#fff;
+	}
+
+	.gitcontent{
+		margin-top:15px;
+		margin-left: 60px;
+	}
+
+}
+
