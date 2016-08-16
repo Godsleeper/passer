@@ -21,7 +21,9 @@
 	color: #fff;
 	height:480px;
 	overflow: hidden;
+	transition:all 1s;
 }
+
 
 .topbar_model(@height){
 	height:@height;
@@ -103,6 +105,21 @@
  		border-radius: 5px;
  		border: none;
  	}
+ 	.triangel{	
+ 		float:left;
+ 		width: 0;
+   		height: 0;
+   		margin-top: 50px;
+   		margin-left: -130px;
+    	border-left: 6px solid transparent;
+   		border-right: 6px solid transparent;
+    	border-bottom: 12px solid rgb(254, 182, 0);
+    	 transition:all 1s;
+ 	}
+ 	.triangel:hover{
+ 		transform:rotate(180deg);
+ 	}
+
  	.searchbtn{
  		font-size:20px;
  		padding: 5px 20px;
@@ -113,6 +130,11 @@
  		color:#fff;
  		border-radius: 5px;
  		outline: none;
+ 		position:relative;
+ 		transition:all .5s;
+ 	}
+ 	.searchbtn:hover{
+ 		background: rgb(254, 182, 0);
  	}
 }
 
