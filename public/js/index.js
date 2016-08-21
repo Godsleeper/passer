@@ -14,24 +14,24 @@ $(function(){
 		switch(target.id){
 			case "imgbtn1":
 				clear();	
-				$(target).addClass("active");
+				$(target).addClass("list_active");
 				move(target.id);
 				break;
 			case "imgbtn2":
 				clear();
-				$(target).addClass("active");
+				$(target).addClass("list_active");
 				move(target.id);
 				break;
 			case "imgbtn3":
 				clear();
-				$(target).addClass("active");
+				$(target).addClass("list_active");
 				move(target.id);
 				break;
 		}
 	})
 	var clear = function(){
 		$(".topbar_bg").removeClass('cssmove');
-		$(".listbtn").children().removeClass("active");
+		$(".listbtn").children().removeClass("list_active");
 
 	}
 	var move = function(idx){

@@ -13,18 +13,19 @@
             each cat in categories
               li
                 a(href="#") #{cat.name}
+                .description #{cat.id}
         li.top_list_item
           a(href="#") 随便看看
         li.top_list_item
           a(href="#") 未完待续
         li.top_list_item
-          a(href="#") 未完待续
+          a(href="#") 登录
         li.top_list_item
-          a(href="#") 未完待续
+          a(href="#") 注册
     .topbar_content
       .maintitle 挂了别叫妈，就找过了么
       ul.listbtn
-        li.imgbtn#imgbtn1.active
+        li.imgbtn#imgbtn1.list_active
         li.imgbtn#imgbtn2
         li.imgbtn#imgbtn3
     .topbar_footer
@@ -32,9 +33,9 @@
       button.searchbtn search
       .triangel
     .topbar_bg 
-      img(src="/images/top_bg.jpg")
-      img(src="/images/top_bg.jpg")
-      img(src="/images/top_bg.jpg")
+      img(src="/images/top_bg_1.jpg")
+      img(src="/images/top_bg_2.jpg")
+      img(src="/images/top_bg_3.jpg")
 
       
 
