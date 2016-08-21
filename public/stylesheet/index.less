@@ -7,6 +7,9 @@
 .clearfix{
 	zoom:1;
 }
+.cssmove{
+	transition:all 1s;
+}
 .clearfix:after{
 	clear:both;
 	content:'.';
@@ -17,7 +20,7 @@
 }
 
 .topbar{
-	background: url('../images/top_bg.jpg')no-repeat;
+	position:relative;
 	color: #fff;
 	height:480px;
 	overflow: hidden;
@@ -63,17 +66,31 @@
 	}
 	.top_list{
 		a:hover{
-			color:rgb(254, 182, 0)
+			color:rgb(254, 182, 0);
 		}
 		float:right;
 		list-style: none;
-		li{
+		.top_list_item{
+			margin:10px 10px;
 			display: inline-block;
-			margin-left: 30px;
 			font-size: 14px;
-			margin-top: 10px;
 			padding: 5px 10px;
 		}
+		.subject{
+			position:relative;
+			.subject_content{
+			padding:10px;
+			background: #000;
+			position: absolute;
+			top:30px;
+			left:0px;
+			width:inherit;
+				li{
+					list-style: none;
+				}
+			}
+		}
+
 		.active{
 			a{
 			color:rgb(254, 182, 0);
@@ -85,6 +102,7 @@
 	}
 }
 .topbar_content{
+	position:relative;
 	margin-top: 0px;
  	.topbar_model(350px);
  	.maintitle{
@@ -94,6 +112,41 @@
  		font-weight: bold;
  		font-size: 50px;
  	}
+ 	.listbtn{
+ 		position: absolute;
+ 		top:50%;
+ 		left:-70px;
+ 		.imgbtn{
+ 			list-style: none;
+ 			height:8px;
+ 			width: 8px;
+ 			border-radius: 8px;
+ 			background:#fff;
+ 			margin-bottom: 10px;
+ 			cursor: pointer;
+
+ 		}
+ 		.imgbtn:hover{
+ 			transition:all 0.3s;
+ 			transform: scale(1.5);
+ 		}
+ 		.active{
+ 				background:rgb(254, 182, 0);
+ 		}
+ 	}
+ }
+
+ .topbar_bg{
+ 	width:4047px;
+ 	height:480px;
+ 	left:0;
+ 	top:0;
+ 	position:absolute;
+ 	z-index: -99;
+ 	.img{
+ 		float:left; 
+ 	}
+ 	
  }
 
 .topbar_footer{
