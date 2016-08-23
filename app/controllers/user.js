@@ -51,7 +51,7 @@ exports.showSignin = function(req,res){
 
 //登陆模块
 exports.signin = function(req,res){
-	var _user = req.body.user;
+	var _user = req.body.user;//user[name],user[password]
 	var name = _user.name;
 	var password = _user.password;
 	User.findOne({name:name},function(err,user){

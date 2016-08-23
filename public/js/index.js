@@ -8,6 +8,7 @@ $(function(){
 		$(".topbar").css({height:480});
 		return false;
 	})
+
 	//图片轮播
 	$(".listbtn").click(function(event){
 		var target = event.target;
@@ -29,6 +30,7 @@ $(function(){
 				break;
 		}
 	})
+
 	var clear = function(){
 		$(".topbar_bg").removeClass('cssmove');
 		$(".listbtn").children().removeClass("list_active");
@@ -41,5 +43,29 @@ $(function(){
 		$(".topbar_bg").addClass('cssmove').css({
 			left:offset});
 	}
+
+	//登录框
+	$("#signinbtn").click(function(){
+		var height=$("body").height()+'px';
+		$(".loginCon").css({
+			visibility:"visible",
+			opacity:1
+		});
+		$(".mask").css({
+			display:"block",
+			height:height,
+		});
+		return false;
+	})
+	$(".close").click(function(){
+		$(".loginCon").css({
+			visibility:"hidden",
+			opacity:0
+		});
+		$(".mask").css({
+			display:"none",
+			height:0+'px',
+		});
+	})
 
 })

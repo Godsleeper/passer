@@ -1,16 +1,20 @@
-extend ../layout
-block content
-  .container(style='font-family:"Microsoft YaHei"')
-    .row
-      .col-md-5
-        form(method="POST",action='/user/signup')
-          .modal-body
-            .form-group
-              label(for="signupName") 用户名
-              input#signupName.form-control(name='user[name]',type='text')
-            .form-group
-              label(for="signupPassword") 密码
-              input#signupPassword.form-control(name="user[password]",text="text")
-          .modal-footer
-            button.btn.btn-default(type='button',data-dismiss="modal") 关闭
-            button.btn.btn-success(type='submit') 提交
+doctype
+html
+  head
+    meta(charset="utf-8")
+    title= title
+    include ../includes/head
+    link(href="/stylesheet/sign.css" rel="stylesheet")
+  body
+    include ../includes/headbar
+    .signbox
+      form(method="POST",action='/user/signup')
+        .signuser
+          if user
+            .error 您已经登录
+            .errorlogo 
+          else
+            input#signupName.signusername(name='user[name]',type='text',placeholder="用户名")
+            input#signupPassword.signpassword(name="user[password]",text="text",placeholder="密码")
+            input#rePassword.signpassword(text="password",placeholder="确认密码")
+            button.signbtn(type='submit') Sign Up

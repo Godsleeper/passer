@@ -1,0 +1,57 @@
+.signbox{
+	width: 600px;
+	height: 300px;
+	margin: 0 auto;
+	border-radius: 8px;
+	margin-top: 100px;
+	padding:25px;
+	border: 1px solid  #D1D1D1;
+	position: relative;
+	&:after{
+		position: absolute;
+		content: "";
+		display: block;
+		width: 1px;
+		height:250px;
+		background: #E0E0E0;
+		margin: auto;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+	}
+	input{
+		display: block;
+		width: 285px;
+		height: 35px;
+		line-height: 35px;
+		box-sizing: border-box;
+		padding: 10px;
+		margin-top:30px;
+		color:#B0B0B0;
+	}
+	.signbtn{
+		outline: none;
+		margin-top: 30px;
+		width:287px;
+		height: 35px;
+		cursor: pointer;
+		background:rgb(0, 128, 255);
+		border: none;
+		color:#fff;
+		border-radius: 5px;
+	}
+	.signinbtn{
+		margin-top: 50px;
+	}
+	.mention{
+		font-size: 14px;
+		color: #595959;
+		margin-top: 30px;
+		a{
+			text-decoration: none;
+			color: rgb(0, 128, 255);
+			font-weight: bold;
+		}
+	}
+}

@@ -1,0 +1,167 @@
+*{
+	margin:0px;
+	padding: 0px;
+	font-family: "Microsoft YaHei"
+}
+
+body{
+	position: relative;
+}
+
+.clearfix{
+	zoom:1;
+}
+
+.clearfix:after{
+	clear:both;
+	content:'.';
+	display:block;
+	width: 0;
+	height: 0;
+	visibility:hidden;
+}
+.topbar{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.topbar_model(@height){
+	height:@height;
+	width:1200px;
+	margin: 0 auto;
+}
+
+.topbar_header{
+	color: #fff;
+	.topbar_model(60px);
+	a{
+		color:#fff;
+		text-decoration: none;
+	}
+	.logo{
+		font-size: 20px;
+		font-weight: bold;
+		display:inline-block;
+		height: 50px;
+		line-height: 50px;
+		float:left;
+		text-decoration: none;
+		margin-left:10px;
+		.logotext{
+			float:left;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		span{
+			display:inline-block;
+			float:left;
+			background:url('../images/head_logo.png')no-repeat center left;
+			background-size:40px 40px;	
+			height:50px;
+			width:50px;
+		}
+	}
+	.top_list{
+		a:hover{color:rgb(254, 182, 0);}
+		float:right;
+		list-style: none;
+		.top_list_item{
+			margin:13px 10px;
+			display: inline-block;
+			font-size: 14px;
+			padding: 5px 10px;
+		}
+		.active{
+			a{color:rgb(254, 182, 0);}	
+			border:solid 2px rgb(254, 182, 0);
+			border-radius: 3px;
+		}
+	}
+}
+
+.mask{
+	display: none;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 998;
+}
+
+.loginCon{
+	visibility: hidden;
+	opacity:0;
+
+	border-radius: 8px;
+	position: fixed;
+	background: #fff;
+	padding:30px;
+	width: 290px;
+	height:200px;
+	margin: auto;
+	left:0;
+	top:0;
+	bottom: 0;
+	right: 0;
+	z-index:999;
+	input{
+		display: block;
+		width: 285px;
+		height: 35px;
+		line-height: 35px;
+		box-sizing: border-box;
+		padding: 10px;
+		margin: 0 auto;
+		margin-top:15px;
+		color:#B0B0B0;
+	}
+	.loginbtn{
+		outline: none;
+		transition:all .3s;
+		margin-top: 30px;
+		width:287px;
+		height: 35px;
+		cursor: pointer;
+		background:rgb(0, 128, 255);
+		border: none;
+		color:#fff;
+		position:relative;
+		border-radius: 5px;
+		&:hover{
+		background:rgb(254, 182, 0);
+		}
+		&:after{
+		position:absolute; 
+		content:"";
+		width: 287px;
+		height: 1px;
+		top:50px;
+		left:0px;
+		background: #DADADA;
+		display: block;
+		}
+	}
+	.mention{
+		font-size: 12px;
+		color: #595959;
+		margin-top: 30px;
+		a{
+			text-decoration: none;
+			color: rgb(0, 128, 255);
+			font-weight: bold;
+		}
+	}
+	.close{
+		cursor: pointer;
+		margin: 0 auto;
+		width:25px;
+		height: 25px;
+		margin-top: 30px;
+		color:#fff;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+		border-radius: 25px;
+		border: 2px solid #fff;
+	}
+}

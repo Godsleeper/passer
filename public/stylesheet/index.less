@@ -4,6 +4,9 @@
 	font-family: "Microsoft YaHei"
 }
 
+body{
+	position: relative;
+}
 .clearfix{
 	zoom:1;
 }
@@ -27,8 +30,6 @@
 	transition:all 1s;
 }
 
-
-
 .topbar_model(@height){
 	height:@height;
 	width:1200px;
@@ -36,7 +37,7 @@
 }
 
 .topbar_header{
-	padding: 0px 73px;
+	padding: 0 76px;
 	background: rgba(0, 0, 0, 0.3);
 	.topbar_model(60px);
 	a{
@@ -192,6 +193,7 @@
  	}
 
  	.searchbtn{
+ 		cursor: pointer;
  		font-size:20px;
  		padding: 5px 20px;
  		float: left;
@@ -362,12 +364,94 @@
 	 		h2{transform:scale(1);}
 	 		.border{transform:scale(.8) rotate(0deg);}
 	 	}
-
-	 }
-	
-
-
+	}
 }
 
+.mask{
+	display: none;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 998;
+}
 
+.loginCon{
+	visibility: hidden;
+	opacity:0;
+	transition: all .6s;
+	border-radius: 8px;
+	position: fixed;
+	background: #fff;
+	padding:30px;
+	width: 290px;
+	height:200px;
+	margin: auto;
+	left:0;
+	top:0;
+	bottom: 0;
+	right: 0;
+	z-index:999;
+	input{
+		display: block;
+		width: 285px;
+		height: 35px;
+		line-height: 35px;
+		box-sizing: border-box;
+		padding: 10px;
+		margin: 0 auto;
+		margin-top:15px;
+		color:#B0B0B0;
+	}
+	.loginbtn{
+		outline: none;
+		transition:all .3s;
+		margin-top: 30px;
+		width:287px;
+		height: 35px;
+		cursor: pointer;
+		background:rgb(0, 128, 255);
+		border: none;
+		color:#fff;
+		position:relative;
+		border-radius: 5px;
+		&:hover{
+		background:rgb(254, 182, 0);
+		}
+		&:after{
+		position:absolute; 
+		content:"";
+		width: 287px;
+		height: 1px;
+		top:50px;
+		left:0px;
+		background: #DADADA;
+		display: block;
+		}
+	}
+	.mention{
+		font-size: 12px;
+		color: #595959;
+		margin-top: 30px;
+		a{
+			text-decoration: none;
+			color: rgb(0, 128, 255);
+			font-weight: bold;
+		}
+	}
+	.close{
+		cursor: pointer;
+		margin: 0 auto;
+		width:25px;
+		height: 25px;
+		margin-top: 30px;
+		color:#fff;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+		border-radius: 25px;
+		border: 2px solid #fff;
+	}
+}
 

@@ -16,7 +16,7 @@ exports.index=function(req,res){
 
 	//渲染模版引擎生成的页面
 	res.render('mainIndex',{
-		title:"爱电影",
+		title:"过了么",
 		categories:categories
 		})
     })	
