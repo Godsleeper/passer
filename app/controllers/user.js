@@ -57,7 +57,7 @@ exports.signin = function(req,res){
 	User.findOne({name:name},function(err,user){
 		if(err){console.log(err);}
 		if(!user){
-			return res.redirect('/signup');//如果没有这个人,返回首页
+			return res.json({success:1});//如果没有这个人,返回首页
 		}
 		user.comparePassword(password,function(err,isMatch){
 			if(err){console.log(err)}
@@ -71,7 +71,22 @@ exports.signin = function(req,res){
 		})
 	})
 };
+// exports.signin = function(req,res){
+// 	var name = req.body.name;
+// 	var password = req.body.password;
+// 	User.findOne({name:name},function(err,user){
+// 		if(err){console.log(err);}
+// 		if(!user){
+// 			return res.json({success:1});//如果没有这个人,返回首页
+// 		}	
+// 	})
+// };
 
+// exports.test=function(req,res){
+// 	var name=req.body.name;
+// 	var password = req.body.password;
+// 	res.json({name:name});
+// }
 //登出
 exports.logout=function(req,res){
 	delete req.session.user;//将请求中的session删除

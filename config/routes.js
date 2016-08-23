@@ -45,6 +45,8 @@ app.get('/admin/user/list',User.signinRequired,User.adminRequired,User.list);
 app.get('/signin',User.showSignin);
 //注册显示
 app.get('/signup',User.showSignup);
+//测试
+// app.post('/test',User.signinRequired,User.test)
 
 //************************用户评论的路由规划*****************************
 app.post('/user/comment',User.signinRequired,Comment.save);

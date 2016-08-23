@@ -3,7 +3,7 @@ html
   head
     meta(charset="utf-8")
     title= title
-    include ../includes/head
+    link(href="/stylesheet/headbar.css" rel="stylesheet")
     link(href="/stylesheet/sign.css" rel="stylesheet")
   body
     include ../includes/headbar
@@ -18,3 +18,5 @@ html
             input#signupPassword.signpassword(name="user[password]",text="text",placeholder="密码")
             input#rePassword.signpassword(text="password",placeholder="确认密码")
             button.signbtn(type='submit') Sign Up
+    script(src="/libs/jquery/dist/jquery.min.js")
+    script(src="js/headbar.js")

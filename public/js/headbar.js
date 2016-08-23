@@ -1,6 +1,16 @@
 $(function(){
+	// $("#loginbtn").click(function(){
+	// 	$.post("/test",{
+	// 			name:$("#signName").val(),
+	// 			password:$("#signPassword").val()
+	// }).done(function(results){
+	// 			alert(results.name);
+	// 	})
+	// })
+
 	//登录框
 	$("#signinbtn").click(function(event){
+		
 		$(".loginCon").css({
 			visibility:"visible",
 			opacity:1,
@@ -10,7 +20,7 @@ $(function(){
 			display:"block",
 			height:$(window).height()+'px',
 		});
-		return false;
+		event.preventDefault;
 	})
 	//关闭按钮
 	$(".close").click(function(){
